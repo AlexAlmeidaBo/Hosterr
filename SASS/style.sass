@@ -1,0 +1,205 @@
+@use 'variables'
+@use 'mixins'
+    
+*
+    font-family: 'Lato', sans-serif
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+
+body
+    background-color: variables.$bg-color
+    min-height: 100vh
+
+    a
+        color: variables.$primary-color
+        text-decoration: none
+        transition: .4s
+
+    ul
+        list-style: none
+
+.header
+    display: flex
+    justify-content: space-between
+    @include mixins.container
+    
+
+    &-logo
+        display: flex
+        @include mixins.flex-center
+        
+
+        img
+            width: 120px  
+
+        p
+            background: rgb(236,186,95)
+            background: linear-gradient(90deg, rgba(236,186,95,1) 16%, rgba(234,125,101,1) 63%, rgba(234,82,116,1) 100%)
+            padding: 3px 15px
+            border-radius: 20px
+            margin-left:20px
+            color: #fff
+            font-size: 12px
+
+    
+    &-navbar    
+
+        ul
+            height: 100%
+            @include mixins.flex-center
+        
+            li
+                margin: 0 1rem
+                text-transform: uppercase
+                font-size: .6rem
+                font-weight: 600
+
+                a
+                    &:hover
+                        color: variables.$secundary-color
+
+    &-btns
+
+        ul
+            height: 100%
+            @include mixins.flex-center
+
+            li
+                margin:  0 1rem
+                font-size: .6rem
+                text-transform: uppercase
+                font-weight: 600
+
+                a
+                    &:hover
+                        color: variables.$secundary-color
+                
+                .same-btn
+                    @include mixins.blue-btn
+                    text-transform: none
+                    font-size: .8rem
+                    &:hover
+                        background-color: variables.$btn-hover 
+                        color: white
+
+.content
+    @include mixins.container
+    @include mixins.flex-center
+    width: 100%
+    position: relative
+
+    &-left
+        flex-direction: columns
+        width: 50%
+        
+        h1
+            font-family: 'Playfair Display', serif
+            font-size: 3.6rem
+            margin-bottom: 10px
+        
+        p
+            color: variables.$primary-color
+            font-size: 1.2rem
+            letter-spacing: -.1px
+            text-align: start
+            margin-bottom: 10px
+
+        &-inputs
+            align-items: center
+            justify-content: center
+
+            input
+                padding: 14px 20px
+                border-radius:5px
+                width: 68%
+                border: none
+                background-color: #fff
+                outline: none
+                margin-bottom: 10px
+
+                &::placeholder
+                    font-size: 1.1rem
+                    padding-left: 10px
+                    color: variables.$primary-color
+                    
+            .same-btn
+                @include mixins.blue-btn
+
+    
+        &-span
+            display: flex
+            align-items: center
+
+            p
+                margin: 0 15px
+                font-size: 1.1rem
+
+
+    &-right
+        @include mixins.flex-center
+        position: relative
+        width: 50%
+        height: 400px
+
+        img
+            width: 300px
+            position: absolute
+
+        .roxo
+            transform: rotate(-15deg)
+                
+        .rosa
+            transform: rotate(-30deg)
+        
+        .azul
+            transform: rotate(-45deg)
+        
+.footer
+    display: flex
+    justify-content: space-between
+    @include mixins.container
+    height: 100%
+    
+
+    &-social
+        ul
+            @include mixins.flex-center
+            height: 100%
+
+            li
+                margin: 0 1rem
+
+                a
+                    &:hover
+                        color: variables.$secundary-color
+    &-help
+        @include mixins.flex-center
+        width: 40%
+        font-family: 'Playfair Display', serif
+        
+        img
+            margin: 0 2%
+
+        &-text
+            p
+                font-size: 1.1rem
+            
+            a
+                font-size: 1rem
+                font-weight: 700
+
+                &:hover
+                    color: variables.$secundary-color
+
+
+        
+    
+             
+
+
+                 
+
+                    
+             
